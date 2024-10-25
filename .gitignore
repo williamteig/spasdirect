@@ -53,3 +53,6 @@ yarn-error.log*
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Ignore Foxy Cart custom styles
+public/fc-styles.css
