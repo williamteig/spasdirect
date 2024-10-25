@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Handle manual postcode submission and fetch details from API
         function handleManualPostcodeSubmission(postcode) {
-            fetch(`https://jo5y26sqvgezuirmsmw5fuwmbm0xjwnn.lambda-url.us-east-1.on.aws/?postcode=${postcode}`)
+            fetch(`/api/validatePostcode?postcode=${postcode}`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.localities?.locality) {
