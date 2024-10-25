@@ -1,4 +1,3 @@
-<!-- LOCALIZER -->
 document.addEventListener('DOMContentLoaded', function () {
     (function () {
         // Collection points with latitudes and longitudes
