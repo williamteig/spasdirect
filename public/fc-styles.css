@@ -1,3 +1,7 @@
+[data-fc-cart] {
+    background-color: #2733de;
+}
+
 /* Padlock icon in cart "Checkout" button */
 #fc .fa-lock {
     fill: #FFFFFF;
