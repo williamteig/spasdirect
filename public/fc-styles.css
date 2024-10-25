@@ -1,0 +1,30 @@
+<style>
+/* Padlock icon in cart "Checkout" button */
+#fc .fa-lock {
+    fill: #FFFFFF;
+}
+/* Cart/Checkout buttons */
+#fc .fc-action--checkout--button, #fc .fc-button--subscription-cancel, #fc .fc-button--submit {
+    background: #ec6725;
+    border-color: #ec6725;
+    text-shadow: 1px 1px 0px #ec6725;
+}
+/* Cart/Checkout buttons - Hover */
+#fc .fc-action--checkout--button:hover, #fc .fc-action--checkout--button:focus, #fc .fc-button--subscription-cancel:hover, #fc .fc-button--subscription-cancel:focus, #fc .fc-button--submit:hover, #fc .fc-button--submit:focus {
+    background: #ec6725;
+    border-color: #ec67825;
+    text-shadow: 1px 1px 0px #ec6725;
+}
+/* Sidecart top checkout button */
+[data-fc-sidecart] #fc .fc-fixed-button-right .fc-btn-action {
+    background: #ec6725;
+}
+/* Sidecart top checkout button - Hover */
+[data-fc-sidecart] #fc .fc-fixed-button-right .fc-btn-action:hover {
+    background: #ec6725;
+}
+/* spinner action on checkout submit button */
+#fc .fc-button--submit .fc-spinner > div {
+    background-color:#101a5c;
+}
+</style>
