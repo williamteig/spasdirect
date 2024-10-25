@@ -1,5 +1,4 @@
 <!-- LOCALIZER -->
-<script>
 document.addEventListener('DOMContentLoaded', function () {
     (function () {
         // Collection points with latitudes and longitudes
@@ -207,4 +206,3 @@ document.addEventListener('DOMContentLoaded', function () {
         checkForQueryPostcode();
     })();
 });
-</script>
