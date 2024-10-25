@@ -5,7 +5,7 @@
 
 /* Cart/Checkout buttons */
 #fc .fc-action--checkout--button, #fc .fc-button--subscription-cancel, #fc .fc-button--submit {
-    background: #ec6725;
+    background: #ec6725; !important
     border-color: #ec6725;
     text-shadow: 1px 1px 0px #ec6725;
 }
