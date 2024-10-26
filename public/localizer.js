@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Handle manual postcode submission and fetch details from API
         function handleManualPostcodeSubmission(postcode) {
-            fetch(`/api/validatePostcode?postcode=${postcode}`)
+            fetch(`https://spasdirect.vercel.app/api/validatePostcode?postcode=${postcode}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
@@ -142,11 +142,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         });
                     } else {
                         console.error('Invalid postcode data received');
+                        // Update UI to show error message
                     }
                 })
                 .catch(error => {
                     console.error('Error fetching postcode:', error);
-                    // Here you could also update the UI to show an error message to the user
+                    // Update UI to show error message
                 });
         }
 
