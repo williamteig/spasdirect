@@ -126,7 +126,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Handle manual postcode submission and fetch details from API
         function handleManualPostcodeSubmission(postcode) {
             fetch(`/api/validatePostcode?postcode=${postcode}`)
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     if (data.localities?.locality) {
                         const locality = data.localities.locality[0];
@@ -135,9 +140,14 @@ document.addEventListener('DOMContentLoaded', function () {
                             latitude: locality.latitude,
                             longitude: locality.longitude
                         });
+                    } else {
+                        console.error('Invalid postcode data received');
                     }
                 })
-                .catch(error => console.error('Error fetching postcode:', error));
+                .catch(error => {
+                    console.error('Error fetching postcode:', error);
+                    // Here you could also update the UI to show an error message to the user
+                });
         }
 
         // Check if postcode is passed in the query parameters and handle it
