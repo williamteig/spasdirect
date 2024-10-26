@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Handle manual postcode submission and fetch details from API
         function handleManualPostcodeSubmission(postcode) {
-            fetch(`https://spasdirect.vercel.app/api/validatePostcode?postcode=${postcode}`)
+            fetch(`https://spasdirect.vercel.app/api/validatePostcode.js?postcode=${postcode}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
